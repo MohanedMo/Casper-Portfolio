@@ -3,14 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="this website for any persone want to have a portfolio website."/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robota" content="index, archive"/>
+    <link rel="Canonical" href="https://www.bbc.com/"/>
     <!-- Page Title -->
-    <title>Casper Template</title>
+    <title>Casper Portfolio Template</title>
     <!-- Page Icon -->
-    <link rel="icon" href="images/logo.png" />
+    <link rel="icon" href="images/logo.webp" />
     <!-- Page Style -->
     <link rel="stylesheet" href="css/all.min.css" />
-    <link rel="stylesheet" href="css/casper.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css.map" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/main.css.map" />
     <link rel="stylesheet" href="css/normalize.css" />
     <!-- Page Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -22,47 +28,59 @@
   </head>
   <body>
     <!-- ............. Headers Elements ............... -->
-    <header>
-      <div class="container">
-        <div class="logo">
-          <a href=""><img src="images/logo.png" alt="" /></a>
-        </div>
-        <nav>
-          <i class="fas fa-bars"></i>
-          <ul>
-            <li><a href="#home" class="active">home</a></li>
-            <li><a href="#services">services</a></li>
-            <li><a href="#portfolio">portfolio</a></li>
-            <li><a href="#about">about</a></li>
-            <li><a href="#pricing">pricing</a></li>
-            <li><a href="#contact">contact</a></li>
+    <nav class="navbar navbar-expand-lg sticky-top pb-0">
+      <div class="container">   
+        <a class="navbar-brand" href="#"><img class="logo-img" src="images/logo.webp" alt="website photo"></a>
+        <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#main" aria-controls="main" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars text-white"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="main">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-uppercase ">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services">services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#portfolio">portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">about</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#pricing">pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">contact</a>
+            </li>
           </ul>
-          <div class="form">
-            <i class="fas fa-search"></i>
-          </div>
-        </nav>
+        </div>
+        <div class="bars ms-5 d-none d-lg-block border-start border-white">
+          <i class="fa-solid fa-magnifying-glass ms-2 text-white"></i>
+        </div>
       </div>
-    </header>
+    </nav>
     <!-- ............. Landing Elemnets ............... -->
-    <section class="landing">
+    <section class="landing w-100 position-relative">
       <div class="overlay">
-        <div class="text">
-          <div class="content">
-            <h2>HELLO WORLD!</h2>
-            <h2>WE ARE KASPER,WE MAKE ART.</h2>
-            <h4>Lorem Ipsum</h4>
+        <div class="text col-6 position-absolute py-2 px-5 d-flex justify-content-end">
+          <div class="content text-white">
+            <h1 class=" fs-5 mb-3 fw-normal">HELLO WORLD!</h1>
+            <h2 class="fs-5 mb-3 fw-normal">WE ARE KASPER,WE MAKE ART.</h2>
+            <h4 class=" fs-5 mb-3 fw-normal">Lorem Ipsum</h4>
             <p>
               Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.
               Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.
               Curabitur aliquet quam. Accumsan id imperdiet et, porttitor at
               sem. Mauris blandit aliquet elit, eget tincidunt.
             </p>
-          </div>
+        </div>
         </div>
       </div>
-      <i class="fas fa-chevron-left"></i>
-      <i class="fas fa-chevron-right"></i>
-      <ul class="bullets">
+      <i class="fas fa-chevron-left left-slide text-white-50 fs-4 position-absolute top-50"></i>
+      <i class="fas fa-chevron-right right-slide text-white-50 fs-4 position-absolute top-50"></i>
+      <ul class="bullets position-absolute d-flex gap-2">
         <li></li>
         <li class="active"></li>
         <li></li>
@@ -72,212 +90,204 @@
     <section class="services" id="services">
       <div class="container">
         <div class="main-heading">
-          <h2>services</h2>
-          <br />
+          <h2 class="pb-5 text-uppercase position-relative">services</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
             ipsam vero blanditiis aut natus maiores beatae suscipit.
           </p>
         </div>
-        <div class="grid">
-          <div class="col">
-            <div>
-              <i class="fas fa-desktop"></i>
+        <div class="row">
+            <div class="col-md-6 d-flex flex-column flex-md-row text-center text-md-start">
+              <i class="fas fa-desktop mx-5 fs-1 pt-3"></i>
               <div class="text">
-                <h2>vorem imet introvute</h2>
-                <p>
+                <h3 class="mt-3 mt-md-0">vorem imet introvute</h3>
+                <p class="mt-3 mt-md-0">
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit
                   officiis accusantium aut culpa facilis laboriosam omnis itaque
                   alias mollitia iusto. Quia consectetur
                 </p>
               </div>
             </div>
-            <div>
-              <i class="fas fa-pencil-ruler"></i>
+            <div class=" col-md-6 d-flex flex-column flex-md-row text-center text-md-start">
+              <i class="fas fa-pencil-ruler mx-5 fs-1 pt-3"></i>
               <div class="text">
-                <h2>vorem imet introvute</h2>
-                <p>
+                <h3 class="mt-3 mt-md-0">vorem imet introvute</h3>
+                <p class="mt-3 mt-md-0">
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit
                   officiis accusantium aut culpa facilis laboriosam omnis itaque
                   alias mollitia iusto. Quia consectetur
                 </p>
               </div>
             </div>
-          </div>
-          <div class="col">
-            <div>
-              <i class="fas fa-cog"></i>
+            <div class="col-md-6 d-flex flex-column flex-md-row text-center text-md-start">
+              <i class="fas fa-cog mx-5 fs-1 pt-3"></i>
               <div class="text">
-                <h2>vorem imet introvute</h2>
-                <p>
+                <h3 class ="mt-3 mt-md-0">vorem imet introvute</h3>
+                <p class="mt-3 mt-md-0">
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit
                   officiis accusantium aut culpa facilis laboriosam omnis itaque
                   alias mollitia iusto. Quia consectetur
                 </p>
               </div>
             </div>
-            <div>
-              <i class="fas fa-camera"></i>
+            <div class="col-md-6 d-flex flex-column flex-md-row text-center text-md-start">
+              <i class="fas fa-camera mx-5 fs-1 pt-3"></i>
               <div class="text">
-                <h2>vorem imet introvute</h2>
-                <p>
+                <h3 class="mt-3 mt-md-0">vorem imet introvute</h3>
+                <p class="mt-3 mt-md-0">
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit
                   officiis accusantium aut culpa facilis laboriosam omnis itaque
                   alias mollitia iusto. Quia consectetur
                 </p>
               </div>
             </div>
-          </div>
         </div>
       </div>
     </section>
     <!-- ............. Design Elements ............... -->
-    <section class="design">
-      <div class="content">
-        <div class="text">
-          <h2>our design comes with!</h2>
+    <section class="design position-relative d-flex align-items-center overflow-hidden">
+      <div class="image d-none d-md-block position-relative text-center">
+        <img src="images/design-photo.webp" alt="Phone Screen"/>
+      </div>
+        <div class="text text-white position-relative py-4 px-5">
+          <h2 class="fs-5 mb-5 mt-3">our design comes with!</h2>
           <ul>
             <li>responsive design</li>
             <li>modern and clean design</li>
             <li>clean code</li>
             <li>browser friendly</li>
           </ul>
-        </div>
       </div>
-      <img
-        src="images/kisspng-iphone-8-plus-iphone-x-apple-facetime-telephone-iphone-x-5abb71e0d52224.827630021522233824873.png"
-        alt=""
-      />
     </section>
     <!-- ............. Portfolio Elements ............... -->
     <section class="portfolio" id="portfolio">
       <div class="container">
         <div class="main-heading">
-          <h2>portfolio</h2>
-          <br />
+          <h2 class="pb-5 text-uppercase position-relative">portfolio</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
             ipsam vero blanditiis aut natus maiores beatae suscipit.
           </p>
         </div>
-        <ul class="shuffle">
-          <li class="active">all</li>
-          <li>app</li>
-          <li>photography</li>
-          <li>web</li>
-          <li>print</li>
+        <ul class="shuffle d-flex flex-column flex-md-row text-center text-md-start gap-4 justify-content-center mb-5 align-items-center ">
+          <li class="active px-4 py-1 text-white">all</li>
+          <li class="px-4 py-1">app</li>
+          <li class="px-4 py-1">photography</li>
+          <li class="px-4 py-1">web</li>
+          <li class="px-4 py-1">print</li>
         </ul>
       </div>
-      <div class="portfolio-image">
-        <div class="box">
-          <img src="images/animal-4544411_1280.jpg" alt="" />
-          <div class="caption">
-            <h4>awesome image</h4>
-            <p>photografy</p>
+      <div class="row m-0">
+        <div class="box col-md-6 col-lg-3 p-0 overflow-hidden position-relative">
+          <img src="images/animal-4544411_1280.webp" alt="owl photo" />
+          <div class="caption position-absolute w-100 px-4 bg-light">
+            <h5 class="mt-3">awesome image</h5>
+            <p class="mt-0">photografy</p>
           </div>
         </div>
-        <div class="box">
-          <img src="images/owl-4104670_1280.jpg" alt="" />
-          <div class="caption">
-            <h4>awesome image</h4>
-            <p>photografy</p>
+        <div class="box col-md-6 col-lg-3 p-0 overflow-hidden position-relative">
+          <img src="images/owl-62703_640.webp" alt="owl photo" />
+          <div class="caption position-absolute w-100 px-4 bg-light">
+            <h5 class="mt-3">awesome image</h5>
+            <p class="mt-0">photografy</p>
           </div>
         </div>
-        <div class="box">
-          <img src="images/bird-3732867_1280.jpg" alt="" />
-          <div class="caption">
-            <h4>awesome image</h4>
-            <p>photografy</p>
+        <div class="box col-md-6 col-lg-3 p-0 overflow-hidden position-relative">
+          <img src="images/bird-3732867_1280.webp" alt="owl photo" />
+          <div class="caption position-absolute w-100 px-4 bg-light">
+            <h5 class="mt-3 mb-0">awesome image</h5>
+            <p class="mt-0">photografy</p>
           </div>
         </div>
-        <div class="box">
-          <img src="images/owl-518838_1280.jpg" alt="" />
-          <div class="caption">
-            <h4>awesome image</h4>
-            <p>photografy</p>
+        <div class="box col-md-6 col-lg-3 p-0 overflow-hidden position-relative">
+          <img src="images/owl-518838_1280.webp" alt="owl photo" />
+          <div class="caption position-absolute w-100 px-4 bg-light">
+            <h5 class="mt-3">awesome image</h5>
+            <p class="mt-0">photografy</p>
           </div>
         </div>
-        <div class="box">
-          <img src="images/european-eagle-owl-2010346_1280.jpg" alt="" />
-          <div class="caption">
-            <h4>awesome image</h4>
-            <p>photografy</p>
+        <div class="box col-md-6 col-lg-3 p-0 overflow-hidden position-relative">
+          <img src="images/european-eagle-owl-2010346_1280.webp" alt="owl photo" />
+          <div class="caption position-absolute w-100 px-4 bg-light">
+            <h5 class="mt-3">awesome image</h5>
+            <p class="mt-0">photografy</p>
           </div>
         </div>
-        <div class="box">
-          <img src="images/fantasy-4806171_1280.jpg" alt="" />
-          <div class="caption">
-            <h4>awesome image</h4>
-            <p>photografy</p>
+        <div class="box col-md-6 col-lg-3 p-0 overflow-hidden position-relative">
+          <img src="images/fantasy-4806171_1280.webp" alt="owl photo" />
+          <div class="caption position-absolute w-100 px-4 bg-light">
+            <h5 class="mt-3">awesome image</h5>
+            <p class="mt-0">photografy</p>
           </div>
         </div>
-        <div class="box">
-          <img src="images/owl-62703_1280.jpg" alt="" />
-          <div class="caption">
-            <h4>awesome image</h4>
-            <p>photografy</p>
+        <div class="box col-md-6 col-lg-3 p-0 overflow-hidden position-relative">
+          <img src="images/owl-62703_1280.webp" alt="owl photo" />
+          <div class="caption position-absolute w-100 px-4 bg-light">
+            <h5 class="mt-3">awesome image</h5>
+            <p class="mt-0">photografy</p>
           </div>
         </div>
-        <div class="box">
-          <img src="images/short-eared-owl-1225961_1280.jpg" alt="" />
-          <div class="caption">
-            <h4>awesome image</h4>
-            <p>photografy</p>
+        <div class="box col-md-6 col-lg-3 p-0 overflow-hidden position-relative">
+          <img src="images/short-eared-owl-1225961_1280.webp" alt="owl photo" />
+          <div class="caption position-absolute w-100 px-4 bg-light">
+            <h5 class="mt-3">awesome image</h5>
+            <p class="mt-0">photografy</p>
           </div>
         </div>
       </div>
-      <a href="#">more</a>
+      <div class="button">
+        <a href="#">more</a>
+      </div>
     </section>
     <!-- ............. video Elements ............... -->
-    <section class="video-info">
-      <video src="images/Explosion - 891.mp4" autoplay loop muted></video>
+    <section class="video-section position-relative">
+      <video class = "d-none d-md-block"src="images/Explosion - 891.mp4" autoplay loop muted></video>
       <div>
-        <div class="text">
-          <h2>super awesome video here</h2>
-          <p>it's all you need</p>
-          <a href="#">see more</a>
+        <div class="text w-100 text-white text-center p-5">
+          <h2 class="text-uppercase fw-bold fs-4">super awesome video here</h2>
+          <p class="mb-5 text-uppercase">it's all you need</p>
+          <a class="text-white text-uppercase py-2 px-4" href="#">see more</a>
         </div>
       </div>
     </section>
     <!-- ............. About Elements ............... -->
     <section class="about" id="about">
       <div class="container">
-        <div class="main-heading">
-          <h2>about us</h2>
-          <br />
+        <div class="main-heading ">
+          <h2 class="pb-5 text-uppercase position-relative">about us</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
             ipsam vero blanditiis aut natus maiores beatae suscipit.
           </p>
         </div>
-        <div>
-          <img src="images/about.png" alt="" />
+        <div class=" photo text-center position-relative">
+          <img src="images/about.webp" alt="Screens Photo" />
         </div>
       </div>
     </section>
     <!-- ............. Counter Elements ............... -->
-    <section class="counter">
+    <section class="counter position-relative">
       <div class="container">
-        <div class="main-cont">
-          <div class="count">
-            <i class="far fa-lightbulb"></i>
-            <h3>1,263</h3>
-            <p>coffee dinks</p>
+        <div class="row flex-column flex-md-row position-relative m-auto w-75 text-center">
+          <div class="box col-md-6 col-lg-3 p-5 text-white">
+            <i class="far fa-lightbulb fs-5 rounded-circle p-2 bg-dark"></i>
+            <h3 class="mt-3 fw-bold fs-2">1,263</h3>
+            <p class="mt-3">coffee dinks</p>
           </div>
-          <div class="count">
-            <i class="fas fa-folder"></i>
-            <h3>256</h3>
-            <p>completed projects</p>
+          <div class="box col-md-6 col-lg-3 p-5 text-white">
+            <i class="fas fa-folder fs-5 rounded-circle p-2 bg-dark"></i>
+            <h3 class="mt-3 fw-bold fs-2">256</h3>
+            <p class="mt-3">completed projects</p>
           </div>
-          <div class="count">
-            <i class="far fa-envelope"></i>
-            <h3>1,743</h3>
-            <p>mail sent</p>
+          <div class="box col-md-6 col-lg-3 p-5 text-white">
+            <i class="far fa-envelope fs-5 v  rounded-circle p-2 bg-dark"></i>
+            <h3 class="mt-3 fw-bold fs-2">1,743</h3>
+            <p class="mt-3">mail sent</p>
           </div>
-          <div class="count">
-            <i class="fas fa-medal"></i>
-            <h3>17</h3>
-            <p>awards reseived</p>
+          <div class="box col-md-6 col-lg-3 p-5 text-white">
+            <i class="fas fa-medal fs-5 rounded-circle p-2 bg-dark"></i>
+            <h3 class="mt-3 fw-bold fs-2">17</h3>
+            <p class="mt-3">awards reseived</p>
           </div>
         </div>
       </div>
@@ -285,55 +295,55 @@
     <!-- ............. Skills Elements ............... -->
     <section class="skills">
       <div class="container">
-        <div class="grid">
-          <div class="test">
-            <h2>testimonials</h2>
-            <p>
+        <div class="row justify-content-between">
+          <div class="testimonial col-md-6">
+            <h3 class="text-center text-uppercase mb-4">testimonials</h3>
+            <p class="text-center">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Error vel
               eligendi porro, corporis veritatis fuga
             </p>
-            <div class="text">
-              <img src="images/owl-845131_640.jpg" alt="" />
-              <p>
+            <div class="text row justify-content-evenly mb-5 text-center text-md-start">
+              <img class="rounded-circle col-md-5 p-0" src="images/testimonial-1.webp" alt="owl photo" />
+              <p class="col-md-7 p-0 pe-3 lh-lg">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                 Sapiente officia maxime adipisci ipsam quam in aperiam
               </p>
             </div>
-            <div class="text">
-              <img src="images/owl-700786_640.jpg" alt="" />
-              <p>
+            <div class="text row justify-content-evenly  text-center text-md-start">
+              <img class=" rounded-circle col-md-5 p-0" src="images/testmimonial-2.webp" alt="owl photo" />
+              <p class="col-md-7 p-0 pe-3 lh-lg">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                 Sapiente officia maxime adipisci ipsam quam in aperiam
               </p>
             </div>
-            <ul>
+            <ul class="bullets d-flex gap-2 justify-content-center mt-5">
               <li></li>
               <li></li>
               <li></li>
             </ul>
           </div>
-          <div class="our-skill">
-            <h2>our skills</h2>
-            <p>
+          <div class="our-skill col-md-5">
+            <h3 class="text-center text-uppercase mb-4">our skills</h3>
+            <p class="text-center">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Error vel
               eligendi porro, corporis veritatis fuga
             </p>
             <div class="prog-holder">
-              <h5>adobe</h5>
-              <div class="prog">
-                <span style="width: 90%" data-progress="90%"></span>
+              <h4 class="text-uppercase fs-6">adobe</h4>
+              <div class="progress my-3 w-100 overflow-visible" style="height: 30px">
+                <div class="progress-bar h-100 overflow-visible" role="progressbar" style="width: 90%" aria-valuenow="90%"  aria-valuemin="0" aria-valuemax="100"></div>
               </div>
-              <h5>html & css</h5>
-              <div class="prog">
-                <span style="width: 85%" data-progress="85%"></span>
+              <h4 class="text-uppercase fs-6">html & css</h4>
+              <div class="progress my-3 w-100 overflow-visible" style="height: 30px">
+                <div class="progress-bar h-100 overflow-visible" role="progressbar" style="width: 85%" aria-valuenow="85%" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
-              <h5>javascript</h5>
-              <div class="prog">
-                <span style="width: 80%" data-progress="80%"></span>
+              <h4 class="text-uppercase fs-6">javascript</h4>
+              <div class="progress my-3 w-100 overflow-visible" style="height: 30px">
+                <div class="progress-bar h-100 overflow-visible" role="progressbar" style="width: 80%" aria-valuenow="80%" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
-              <h5>php</h5>
-              <div class="prog">
-                <span style="width: 75%" data-progress="75%"></span>
+              <h4 class="text-uppercase fs-6">php</h4>
+              <div class="progress my-3 w-100 overflow-visible" style="height: 30px">
+                <div class="progress-bar h-100 overflow-visible" role="progressbar" style="width: 75%" aria-valuenow="75%" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
             </div>
           </div>
@@ -341,95 +351,94 @@
       </div>
     </section>
     <!-- ............. Qoute Elements ............... -->
-    <section class="qoute">
-      <div class="container">
-        <h2>
+    <section class="qoute position-relative">
+      <div class="container position-relative py-5">
+        <h2 class="text-center text-white">
           “ACCUMSAN ID CURABITUR ET PORTITOR MAURIS BLANDIT DOLOR LOREM SOME EST
           OUR DONEC STIN LORTIOS”
         </h2>
-        <p>john doe</p>
+        <p class="text-center text-white">john doe</p>
       </div>
     </section>
     <!-- ............. Pricing Elements ............... -->
     <section class="pricing" id="pricing">
       <div class="container">
         <div class="main-heading">
-          <h2>pricing</h2>
-          <br />
+          <h2 class="pb-5 text-uppercase position-relative">pricing</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
             ipsam vero blanditiis aut natus maiores beatae suscipit.
           </p>
         </div>
-        <div class="grid">
-          <div class="col">
-            <div class="price">
-              <p>basic</p>
-              <h2>19</h2>
+        <div class="row">
+          <div class="col-lg-3 col-md-6 text-center mt-3 mt-md-0">
+            <div class="price p-4">
+              <h3 class="fs-6 text-uppercase">basic</h3>
+              <span class=" fs-1 position-relative">19</span>
             </div>
-            <div class="fetures">
-              <p>feture no 1</p>
-              <p>extra feture</p>
-              <p>feture no 2</p>
-              <p>feture</p>
-            </div>
-            <a href="#">buy now</a>
+            <ul class="fetures mb-5">
+              <li class="mt-3 mx-auto p-3">feture no 1</li>
+              <li class="mt-3 mx-auto p-3">extra feture</li>
+              <li class="mt-3 mx-auto p-3">feture no 2</li>
+              <li class="mt-3 mx-auto p-3">feture</li>
+            </ul>
+            <a class="py-2 px-3" href="#">buy now</a>
           </div>
-          <div class="col">
-            <div class="price">
-              <p>premium</p>
-              <h2>29</h2>
+          <div class="col-lg-3 col-md-6 text-center mt-3 mt-md-0">
+            <div class="price p-4">
+              <h3 class="fs-6 text-uppercase">premium</h3>
+              <span class=" fs-1 position-relative">29</span>
             </div>
-            <div class="fetures">
-              <p>feture no 1</p>
-              <p>extra feture</p>
-              <p>feture no 2</p>
-              <p>feture</p>
-            </div>
-            <a href="#">buy now</a>
+            <ul class="fetures mb-5">
+              <li class="mt-3 mx-auto p-3">feture no 1</li>
+              <li class="mt-3 mx-auto p-3">extra feture</li>
+              <li class="mt-3 mx-auto p-3">feture no 2</li>
+              <li class="mt-3 mx-auto p-3">feture</li>
+            </ul>
+            <a class="py-2 px-3" href="#">buy now</a>
           </div>
-          <div class="col">
-            <div class="price">
-              <p>pro</p>
-              <h2>39</h2>
+          <div class="col-lg-3 col-md-6 text-center mt-3 mt-md-0">
+            <div class="price p-4">
+              <h3 class="fs-6 text-uppercase">pro</h3>
+              <span class="fs-1 position-relative">39</span>
             </div>
-            <div class="fetures">
-              <p>feture no 1</p>
-              <p>extra feture</p>
-              <p>feture no 2</p>
-              <p>feture</p>
-            </div>
-            <a href="#">buy now</a>
+            <ul class="fetures mb-5">
+              <li class="mt-3 mx-auto p-3">feture no 1</li>
+              <li class="mt-3 mx-auto p-3">extra feture</li>
+              <li class="mt-3 mx-auto p-3">feture no 2</li>
+              <li class="mt-3 mx-auto p-3">feture</li>
+            </ul>
+            <a class="py-2 px-3" href="#">buy now</a>
           </div>
-          <div class="col">
-            <div class="price">
-              <p>platinum</p>
-              <h2>49</h2>
+          <div class="col-lg-3 col-md-6 text-center mt-3 mt-md-0">
+            <div class="price p-4">
+              <h3 class="fs-6 text-uppercase">platinum</h3>
+              <span class=" fs-1 position-relative">49</span>
             </div>
-            <div class="fetures">
-              <p>feture no 1</p>
-              <p>extra feture</p>
-              <p>feture no 2</p>
-              <p>feture</p>
-            </div>
-            <a href="#">buy now</a>
+            <ul class="fetures mb-5">
+              <li class="mt-3 mx-auto p-3">feture no 1</li>
+              <li class="mt-3 mx-auto p-3">extra feture</li>
+              <li class="mt-3 mx-auto p-3">feture no 2</li>
+              <li class="mt-3 mx-auto p-3">feture</li>
+            </ul>
+            <a class="py-2 px-3" href="#">buy now</a>
           </div>
         </div>
         <div class="contact-link">
-          <h2>Contact us if you have special request</h2>
-          <a href="#">contact us</a>
+          <p class="mb-4">Contact us if you have special request</p>
+          <a class="py-2 px-4 text-white" href="#">contact us</a>
         </div>
       </div>
     </section>
     <!-- ............. Search Elements ............... -->
-    <section class="subscribe">
-      <div class="container">
-        <div class="flex">
-          <div class="sub">
-            <input type="search" name="search" id="search" placeholder="  YOUR MAIL"/>
-            <label for="search"><a href="#">seubscribe</a></label>
-          </div>
-          <div class="text">
+    <section class="subscribe position-relative">
+      <div class="container position-relative p-5">
+        <div class="row">
+          <form class="sub d-flex col-md-7 p-0 align-items-center flex-column flex-md-row" action="/action_page.php">
+            <input class="h-100 flex-grow-1 mb-3 mb-md-0" type="search" name="search" id="search" placeholder="  YOUR MAIL"/>
+            <a class="d-flex align-items-center h-100 text-white" href="#">Subscribe</a>
+          </form>
+          <div class="text col-md-5 text-white mt-3 mt-md-0">
             <p>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum
               adipisci modi itaque nostrum magni molestias
@@ -442,20 +451,19 @@
     <section class="contact" id="contact">
       <div class="container">
         <div class="main-heading">
-          <h2>contact us</h2>
-          <br />
+          <h2 class="pb-5 text-uppercase position-relative">contact us</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
             ipsam vero blanditiis aut natus maiores beatae suscipit.
           </p>
         </div>
-        <div class="flex">
-          <div class="form">
-            <input type="text" placeholder="YOUR NAME">
-            <input type="text" placeholder="YOUR MAIL">
-            <textarea name="message" id="message" placeholder="YOUR MESSAGE" ></textarea>
-          </div>
-          <div class="text">
+        <div class="row flex-row">
+          <form class="col-md-8 d-flex flex-column" action="/action_page.php">
+            <input class="px-2 mb-4" type="text" placeholder="YOUR NAME">
+            <input class="px-2 mb-4" type="text" placeholder="YOUR MAIL">
+            <textarea class="p-3" name="message" id="message" placeholder="YOUR MESSAGE" ></textarea>
+          </form>
+          <div class="text col-md-4 mt-3 mt-md-0 text-center text-md-start">
             <div class="call">
               <h3>get in touch</h3>
               <p>+00 123-456-789</p>
@@ -472,20 +480,23 @@
         </div>
       </div>
     </section>
-    <footer>
-      <div class="container">
-        <img src="images/logo.png" alt="">
+    <footer class="position-relative">
+      <div class="container position-relative text-white text-center">
+        <img src="images/logo.webp" alt="Kasper logo">
         <div class="social">
-        <h3>we are social</h3>
-        <ul>
-          <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-          <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
-          <li><a href="#"><i class="fas fa-globe"></i></a></li>
+        <h3 class="mt-3 p-3 mx-auto">we are social</h3>
+        <ul class="d-flex gap-4 justify-content-center my-4">
+          <li><a href="#"><i class="fab fa-facebook-f text-white"></i></a></li>
+          <li><a href="#"><i class="fab fa-twitter text-white"></i></a></li>
+          <li><a href="#"><i class="fab fa-google-plus-g text-white"></i></a></li>
+          <li><a href="#"><i class="fas fa-globe text-white"></i></a></li>
         </ul>
       </div>
         <p>&copy; 2014-<mark>kasper</mark> all right reserved</p>
       </div>
     </footer>
+    <script src="js/all.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js.map"></script>
   </body>
 </html>

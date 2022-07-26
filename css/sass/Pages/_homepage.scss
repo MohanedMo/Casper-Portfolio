@@ -1,0 +1,418 @@
+
+@use "../Helpers/mixins" as *;
+@use "../Helpers/variables" as *;
+
+/*------ Landing Section style ------*/ 
+.landing{
+    height: calc(100vh - 90px);
+    background-image: url("../../../images/landing.webp");
+    background-size: cover;
+    .overlay{
+        @include overlay($black-color,60%);
+        .text{
+            left: 0;
+            top: 50%;
+            width: 50%;
+            transform: translatey(-50%);
+            background-color: $darkblue-color;
+            @include Screens(mobile){
+                width: 100%;
+            }
+            .content{
+                max-width: 600px;
+                p{
+                    line-height: 2.5;
+                }
+            }
+        }
+    }
+    .left-slide{
+        left: 20px;
+        transform: translateY(-50%);
+        cursor: pointer;
+    }
+    .right-slide{
+        right: 20px;
+        transform: translateY(-50%);
+        cursor: pointer;
+    }
+    .bullets{
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        li{
+            @include circle(20px);
+            border: 1px solid rgba($white-color, 60%);
+            cursor: pointer;
+            &:nth-child(2){
+                background-color: $lightblue-color;
+            }
+        }
+    }
+}
+/*------ Services Section style ------*/ 
+.services{
+    padding-top: $section-gap;
+    padding-bottom: $section-gap;
+    .row{
+        margin-top: $elements-gap;
+            .text{
+                h3{
+                    color: $lightblue-color;
+                }
+                p{
+                    line-height: 2;
+                }
+            }
+        }
+    }
+/*------ Design Section style ------*/ 
+.design{
+    padding-top: $section-gap;
+    padding-bottom: $section-gap;
+    background-image: url("../../../images/design-background.webp");
+    background-size: cover;
+    height: 60vh;
+    &::after{
+        content: "";
+        @include overlay($black-color,60%);
+    }
+        .image{
+            bottom: -100px;
+            z-index: 2;
+            flex: 1;
+        }
+        .text{
+                background-color: $darkblue-color;
+                padding: 30px 40px;
+                flex: 1;
+                z-index: 2;
+            ul{
+                li{
+                    margin-top: 5px;
+                    &::before{
+                        font-family: 'Font Awesome 5 Free';
+                        content: '\f108';
+                        font-weight: 900;
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+    }
+/*------ portfolio Section style ------*/ 
+.portfolio{
+    padding-top: $section-gap;
+    padding-bottom: $section-gap;
+    .shuffle{
+        margin-top: $elements-gap;
+        .active{
+            background-color: $lightblue-color;
+        }
+        li{
+            transition: $transition;
+            cursor: pointer;
+            &:hover{
+                background-color: $lightblue-color;
+                color: white;
+            }
+        }
+    }
+    .row{
+        max-width: 100%;
+        .box{
+            img{
+                transition: $transition;
+            &:hover{
+            transform: scale(1.1) rotate(3deg);
+        }
+    }
+    &::before{
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        @include circle(60px);
+        background-color: transparent;
+        z-index: 1;
+        transition: $transition;
+        cursor: pointer;
+    }
+    &::after{
+        content: "+";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        color: transparent;
+        z-index: 2;
+        font-size: 40px;
+        transition: $transition;
+        cursor: pointer;
+    }
+    &:hover{
+        &::before{
+            background-color: $lightblue-color;
+        }
+        &::after{
+            color: $white-color;
+        }
+    }
+        .caption{
+            bottom: 0;
+            height: 0;
+            transition: $transition;
+            p{
+                color: $lightblue-color;
+            }
+        }
+        &:hover{
+            .caption{
+                height: 80px;
+            }
+        }
+        }
+    }
+}
+/*------ Video Section style ------*/ 
+.video-section{
+    video{
+        width: 100%;
+        height: 100%;
+    }
+    &::before{
+        content: "";
+        @include overlay($black-color,60%)
+    }
+    .text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+        background-color: $darkblue-color;
+        a{
+            background-color: $black-color;
+            transition: $transition;
+            &:hover{
+                background-color: $lightblue-color;
+            }
+        }
+        @include Screens(mobile){
+            position: static;
+            top: 0;
+            left: 0;
+            transform: translate(0);
+        }
+    }
+}
+/*------ About Section style ------*/ 
+.about{
+    padding-top: $section-gap;
+    .container{
+        .photo{
+            top: 100px;
+        }
+    }
+}
+/*------ Counter Section style ------*/
+.counter{
+    padding-top: $section-gap;
+    padding-bottom: $section-gap;
+    background-image: url("../../../images/counter.webp");
+    background-size: cover;
+    .container{
+        .row{
+            margin: auto;
+            background-color: $darkblue-color;
+            
+        }
+    }
+}
+/*------ Skills Section style ------*/
+.skills{
+    padding-top: $section-gap;
+    padding-bottom: $section-gap;
+    .row{
+        .testimonial{
+            >p{
+                margin-bottom: 50px;
+            }
+            img{
+                width: 100px;
+                height: 100px;
+            }
+            .text{
+                p{
+                    position: relative;
+                &::before{
+                    content: "";
+                    position: absolute;
+                    bottom: -20px;
+                    left: 0;
+                    width: 100%;
+                    height: 1px;
+                    background-color: $black-color;
+                }
+                &::after{
+                    content: "John Doe,CEO";
+                    position: absolute;
+                    bottom: -20px;
+                    right: 0;
+                    color: rgba($black-color, 60%);
+                }
+            }
+            }
+            .bullets{
+                li{
+                    @include circle(15px);
+                    border: 1px solid rgba($black-color, 60%);
+                    cursor: pointer;
+                    &:nth-child(2){
+                        background-color: $lightblue-color;
+                    }
+                }
+            }
+        }
+        .our-skill{
+            >p{
+                margin-bottom:  50px;
+            }
+            .prog-holder{
+                .progress{
+                    background-color: #dedadc;
+                    .progress-bar{
+                        background-color: $lightblue-color;
+                        position: relative;
+                        &::before{
+                            content: attr(aria-valuenow);
+                            position: absolute;
+                            left: calc(100% - 18px);
+                            top: -28px;
+                            color: $white-color;
+                            background-color: $black-color;
+                            padding: 0 5px;
+                        }
+                        &::after{
+                            content: "";
+                            position: absolute;
+                            @include traingle(bottom,6px,$black-color);
+                            left: calc(100% - 6px);
+                            top: -10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/*------ Qoute Section style ------*/
+.qoute{
+    padding-top: $section-gap;
+    padding-bottom: $section-gap;
+    background-image: url("../../../images/quote.webp");
+    background-size: cover;
+    &::before{
+        content: "";
+        @include overlay($black-color,60%);
+    }
+}
+/*------ Price Section style ------*/
+.pricing{
+    padding-top: $section-gap;
+    padding-bottom: $section-gap;
+    .row{
+        margin-top: $elements-gap;
+        div{
+            .price{
+                border-top: 2px solid $lightblue-color;
+                border-bottom: 2px solid $lightblue-color;
+                span{
+                    &::before{
+                        content: "$";
+                        position: absolute;
+                        left: -20px;
+                        color: $black-color;
+                        font-size: 18px;
+                    }
+                    &::after{
+                        content: "/mo";
+                        position: absolute;
+                        top: 30px;
+                        right: -40px;
+                        text-transform: uppercase;
+                        color: $black-color;
+                        font-size: 18px;
+                    }
+                }
+            }
+            .fetures{
+                border-bottom: 2px solid $lightblue-color;
+                li:not(:last-child){
+                    border-bottom: 2px solid $lightblue-color;
+                    width: fit-content;
+                }
+            }
+        }
+        a{
+            border: 2px solid $lightblue-color;
+            transition: $transition;
+            color: $black-color;
+            &:hover{
+                color: $white-color;
+                background-color: $lightblue-color;
+            }
+        }
+    }
+    .contact-link{
+        margin-top: 79px;
+        text-align: center;
+        a{
+            background-color: $lightblue-color;
+        }
+    }
+}
+/*------ Subscribe Section style ------*/
+.subscribe{
+    padding-top: $section-gap;
+    padding-bottom: $section-gap;
+    background-image: url("../../../images/subscribe.webp");
+    background-size: cover;
+    &::before{
+        content: "";
+        @include overlay($black-color, 60%)
+    }
+    .row{
+        .sub{
+            border: 1px solid $white-color;
+            @include Screens(mobile){
+                border: none;
+            }
+            a{
+                padding: 0 40px;
+                background-color: $lightblue-color;
+                transition: $transition;
+                &:hover{
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+}
+/*------ Contact Section style ------*/
+.contact{
+    padding-top: $section-gap;
+    padding-bottom: $section-gap;
+    .row{
+        margin-top: $elements-gap;
+        form{
+            input{
+                height: 60px;
+            }
+            textarea{
+                height: 150px;
+                resize: none;
+            }
+        }
+    }
+}

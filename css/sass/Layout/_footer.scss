@@ -1,0 +1,31 @@
+@use "../Helpers/mixins" as *;
+@use "../Helpers/variables" as *;
+/*------ Footer style ------*/ 
+footer{
+    padding-top: $section-gap;
+    padding-bottom: $section-gap;
+    background-image: url("../../../images/footer.webp");
+    background-size: cover;
+    &::before{
+        content: "";
+        @include overlay($black-color,60%);
+    }
+    .social{
+        h3{
+            width: fit-content;
+            border-bottom: 1px solid $white-color;
+        }
+        ul{
+            svg{
+                font-size: 18px;
+            }
+        }
+    }
+    p{
+        mark{
+            background-color: transparent;
+            color: $lightblue-color;
+            cursor: pointer;
+        }
+    }
+}

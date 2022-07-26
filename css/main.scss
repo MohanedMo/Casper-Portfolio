@@ -1,0 +1,35 @@
+// all variables i used in style
+
+@use "./sass/Helpers/variables" as *;
+
+/// all mixin in this style
+
+@use "./sass/Helpers/mixins" as *;
+
+/// Global Stykle
+
+@use "./sass/components/main-rules" as *;
+
+/// all buttons style  
+
+@use "./sass/components/Buttons" as *;
+
+/// main heading in style 
+
+@use "./sass/components/heading" as *;
+
+/// header section
+
+@use "./sass/Layout/header" as *;
+
+/// main page content
+
+@use "./sass/Pages/homepage" as *;
+
+/// footer section
+
+@use "./sass/Layout/footer" as *;
+
+
+
+

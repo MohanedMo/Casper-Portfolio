@@ -1,0 +1,25 @@
+
+@use "../Helpers/variables" as *; 
+
+/*------ All buttons style ------*/ 
+
+.button{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-top: $elements-gap;
+    a{
+        padding: 5px 30px;
+        border: 1px solid $lightblue-color;
+        transition: $transition;
+        color: $white-color;
+        background-color: $lightblue-color;
+        font-weight: 600;
+        &:hover{
+            background-color: transparent;
+            color: $black-color;
+        }
+    }
+}

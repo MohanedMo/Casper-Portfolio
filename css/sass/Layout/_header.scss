@@ -1,0 +1,41 @@
+
+@use "../Helpers/variables" as *; 
+
+/*------ Header style ------*/ 
+nav{
+    background-color: $black-color;
+    .container{
+        position: relative;
+        &::before{
+            content: "";
+            position: absolute;
+            bottom: 0;
+            width: calc(100% - 24px);
+            height: 1px;
+            background-color: rgba($white-color, 30%);
+        }
+        .logo-img{
+            width: 100px;
+        }
+    }
+    .navbar-nav{
+        .nav-item{
+            a{
+                padding: 40px 20px;
+                transition: $transition;
+                border-bottom: 1px solid transparent;
+                color: $white-color;
+                font-size: 14px;
+                &:hover{
+                    color: $lightblue-color;
+                    border-bottom-color: $lightblue-color;
+                }
+            }
+            .active{
+                color: $lightblue-color;
+                border-bottom-color: $lightblue-color;
+            }
+            
+        }
+        }
+    }
