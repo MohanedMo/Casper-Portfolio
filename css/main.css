@@ -126,7 +126,7 @@ nav .navbar-nav .nav-item .active {
 /*------ Landing Section style ------*/
 .landing {
   height: calc(100vh - 90px);
-  background-image: url("../../../images/landing.webp");
+  background-image: url("../images/landing.webp");
   background-size: cover;
 }
 .landing .overlay {
@@ -204,7 +204,7 @@ nav .navbar-nav .nav-item .active {
 .design {
   padding-top: 60px;
   padding-bottom: 60px;
-  background-image: url("../../../images/design-background.webp");
+  background-image: url("../images/design-background.webp");
   background-size: cover;
   height: 60vh;
 }
@@ -374,7 +374,7 @@ nav .navbar-nav .nav-item .active {
 .counter {
   padding-top: 60px;
   padding-bottom: 60px;
-  background-image: url("../../../images/counter.webp");
+  background-image: url("../images/counter.webp");
   background-size: cover;
 }
 .counter .container .row {
@@ -456,7 +456,7 @@ nav .navbar-nav .nav-item .active {
 .qoute {
   padding-top: 60px;
   padding-bottom: 60px;
-  background-image: url("../../../images/quote.webp");
+  background-image: url("../images/quote.webp");
   background-size: cover;
 }
 .qoute::before {
@@ -528,7 +528,7 @@ nav .navbar-nav .nav-item .active {
 .subscribe {
   padding-top: 60px;
   padding-bottom: 60px;
-  background-image: url("../../../images/subscribe.webp");
+  background-image: url("../images/subscribe.webp");
   background-size: cover;
 }
 .subscribe::before {
@@ -578,7 +578,7 @@ nav .navbar-nav .nav-item .active {
 footer {
   padding-top: 60px;
   padding-bottom: 60px;
-  background-image: url("../../../images/footer.webp");
+  background-image: url("../images/footer.webp");
   background-size: cover;
 }
 footer::before {
